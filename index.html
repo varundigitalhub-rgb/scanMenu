@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ScanMenu - Smart QR Menus for Modern Restaurants</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="sm-header">
+    <div class="sm-container sm-header-inner">
+      <div class="sm-logo">
+        <span class="sm-logo-mark">S</span>
+        <div class="sm-logo-text">
+          <span class="sm-logo-name">ScanMenu</span>
+          <span class="sm-logo-tagline">Smart QR Menus</span>
+        </div>
+      </div>
+      <nav class="sm-nav">
+        <a href="#features" class="sm-nav-link">Features</a>
+        <a href="#how-it-works" class="sm-nav-link">How it works</a>
+        <a href="login.html" class="sm-nav-link">Login</a>
+        <a href="signup.html" class="sm-nav-cta">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="sm-hero">
+      <div class="sm-container sm-hero-inner">
+        <div class="sm-hero-text">
+          <h1>Create Digital QR Menus in Minutes</h1>
+          <p class="sm-hero-subtitle">
+            No printing. No hassle. Just scan &amp; order. ScanMenu helps modern restaurants
+            launch beautiful QR menus in a few clicks.
+          </p>
+          <div class="sm-hero-actions">
+            <a href="signup.html" class="sm-btn sm-btn-primary">Get Started</a>
+            <a href="login.html" class="sm-btn sm-btn-outline">Login</a>
+          </div>
+          <p class="sm-hero-note">Start free. No credit card required.</p>
+        </div>
+        <div class="sm-hero-card">
+          <div class="sm-hero-card-header">
+            <p class="sm-pill">ScanMenu</p>
+            <h2>Smart QR Menus for Modern Restaurants</h2>
+          </div>
+          <ul class="sm-hero-list">
+            <li>✓ Create &amp; update menus in real time</li>
+            <li>✓ One QR code for your entire restaurant</li>
+            <li>✓ Mobile-optimized experience for your guests</li>
+          </ul>
+          <div class="sm-hero-mini-steps">
+            <div>
+              <span class="sm-step-label">Step 1</span>
+              <p>Create your free account</p>
+            </div>
+            <div>
+              <span class="sm-step-label">Step 2</span>
+              <p>Add your dishes</p>
+            </div>
+            <div>
+              <span class="sm-step-label">Step 3</span>
+              <p>Print your QR code</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="sm-section">
+      <div class="sm-container">
+        <h2 class="sm-section-title">Why restaurants love ScanMenu</h2>
+        <div class="sm-features-grid">
+          <div class="sm-feature-card">
+            <h3>QR Code Menu</h3>
+            <p>Generate a unique QR code for your restaurant and update your menu without reprinting.</p>
+          </div>
+          <div class="sm-feature-card">
+            <h3>Easy Dashboard</h3>
+            <p>Manage all your dishes, prices, and categories from a clean, simple dashboard.</p>
+          </div>
+          <div class="sm-feature-card">
+            <h3>Mobile Friendly</h3>
+            <p>Your customers get a fast, beautiful menu that works perfectly on any phone.</p>
+          </div>
+          <div class="sm-feature-card">
+            <h3>Increase Orders</h3>
+            <p>Make it effortless for guests to browse, decide, and order more from your menu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="sm-section sm-section-alt">
+      <div class="sm-container">
+        <h2 class="sm-section-title">How ScanMenu works</h2>
+        <div class="sm-steps-grid">
+          <div class="sm-step-card">
+            <span class="sm-step-number">1</span>
+            <h3>Create account</h3>
+            <p>Sign up with your email and restaurant name. It takes less than a minute.</p>
+          </div>
+          <div class="sm-step-card">
+            <span class="sm-step-number">2</span>
+            <h3>Add menu</h3>
+            <p>Enter your dishes, prices, categories, and optional images from the dashboard.</p>
+          </div>
+          <div class="sm-step-card">
+            <span class="sm-step-number">3</span>
+            <h3>Share QR code</h3>
+            <p>Print the QR code on tables, stands, or flyers. Guests scan and see your live menu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="sm-section sm-cta-section">
+      <div class="sm-container sm-cta-inner">
+        <div>
+          <h2 class="sm-section-title">Start Free Today</h2>
+          <p class="sm-cta-text">
+            Launch your digital QR menu today and give your guests a better way to order.
+          </p>
+        </div>
+        <a href="signup.html" class="sm-btn sm-btn-primary">Create your free account</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sm-footer">
+    <div class="sm-container sm-footer-inner">
+      <span>© <span id="sm-year"></span> ScanMenu. All rights reserved.</span>
+      <span class="sm-footer-tagline">Smart QR Menus for Modern Restaurants</span>
+    </div>
+  </footer>
+
+  <script>
+    // Update footer year without needing app.js
+    document.addEventListener("DOMContentLoaded", function () {
+      var yearEl = document.getElementById("sm-year");
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>

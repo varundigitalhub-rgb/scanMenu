@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ScanMenu - Restaurant Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="public-menu-page" class="public-menu-wrapper">
+    <header class="public-menu-header">
+      <div class="sm-container public-menu-header-inner">
+        <div>
+          <div class="public-menu-pill">ScanMenu</div>
+          <h1 id="public-restaurant-name">Loading...</h1>
+          <p id="public-restaurant-subtitle" class="subtitle">
+            Browse our menu and scan the QR code at your table to order.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main class="public-menu-main">
+      <div class="sm-container">
+        <div class="table-banner">
+          <label for="customer-name-input">Name</label>
+          <input
+            type="text"
+            id="customer-name-input"
+            placeholder="Your name"
+          />
+          <span class="table-banner-separator">·</span>
+          <label for="table-number-input">Table</label>
+          <input
+            type="text"
+            id="table-number-input"
+            placeholder="e.g. 5 or A3"
+          />
+          <span id="table-error" class="table-error"></span>
+        </div>
+        <div id="public-menu-container" class="public-menu-container"></div>
+        <p id="public-menu-message" class="empty-message"></p>
+      </div>
+    </main>
+  </div>
+
+  <footer id="whatsapp-bar" class="whatsapp-bar hidden">
+    <div class="sm-container whatsapp-bar-inner">
+      <div class="whatsapp-bar-info">
+        <span id="whatsapp-count">0 items selected</span>
+        <span id="whatsapp-total"></span>
+      </div>
+      <button id="whatsapp-send-btn" class="primary-btn">
+        Send order via WhatsApp
+      </button>
+    </div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
+

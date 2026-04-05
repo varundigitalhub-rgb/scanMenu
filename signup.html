@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ScanMenu - Sign Up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <h1 class="app-title">ScanMenu</h1>
+      <p class="auth-subtitle">Smart QR Menus for Modern Restaurants</p>
+
+      <h2>Create your account</h2>
+      <form id="signup-form" class="auth-form">
+        <div class="form-group">
+          <label for="signup-restaurant-name">Restaurant Name</label>
+          <input type="text" id="signup-restaurant-name" required />
+        </div>
+        <div class="form-group">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" required />
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password (min 6 characters)</label>
+          <input type="password" id="signup-password" required minlength="6" />
+        </div>
+        <button type="submit" class="primary-btn full-width">Create Account</button>
+        <p class="form-message" id="signup-message"></p>
+      </form>
+
+      <p class="auth-switch">
+        Already using ScanMenu?
+        <a href="login.html">Login here</a>
+      </p>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

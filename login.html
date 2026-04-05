@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ScanMenu - Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <h1 class="app-title">ScanMenu</h1>
+      <p class="auth-subtitle">Smart QR Menus for Modern Restaurants</p>
+
+      <h2>Login</h2>
+      <form id="login-form" class="auth-form">
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" required />
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" required />
+        </div>
+        <div class="auth-helper-row">
+          <button type="button" id="forgot-password-btn" class="link-button">
+            Forgot password?
+          </button>
+        </div>
+        <button type="submit" class="primary-btn full-width">Login</button>
+        <p class="form-message" id="login-message"></p>
+        <p class="form-message" id="forgot-message"></p>
+      </form>
+
+      <p class="auth-switch">
+        New to ScanMenu?
+        <a href="signup.html">Create a free account</a>
+      </p>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

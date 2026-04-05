@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ScanMenu - Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="dashboard-page" class="dashboard-wrapper">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sm-logo sidebar-logo">
+          <span class="sm-logo-mark">S</span>
+          <div class="sm-logo-text">
+            <span class="sm-logo-name">ScanMenu</span>
+            <span class="sm-logo-tagline">Dashboard</span>
+          </div>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <button class="sidebar-link active" data-section="overview">Dashboard</button>
+        <button class="sidebar-link" data-section="menu">My Menu</button>
+        <button class="sidebar-link" data-section="qr">QR Code</button>
+        <button class="sidebar-link" data-section="profile">Profile</button>
+      </nav>
+      <div class="sidebar-section">
+        <p class="sidebar-label">Restaurant</p>
+        <p id="restaurant-name" class="sidebar-value">Loading...</p>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-label">Plan</p>
+        <p id="sidebar-plan" class="sidebar-value small-text">Free</p>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-label">Menu URL</p>
+        <p id="menu-url" class="sidebar-value small-text">Loading...</p>
+      </div>
+      <button id="logout-btn" class="secondary-btn full-width">Logout</button>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <h1 id="dashboard-title">Welcome to your ScanMenu dashboard</h1>
+        <p id="dashboard-subtitle" class="subtitle">
+          Manage your digital menu, QR code, and restaurant details in one place.
+        </p>
+      </header>
+
+      <section class="card" data-section="overview">
+        <h2>Overview</h2>
+        <p>
+          Your menu is live at:
+          <strong id="overview-menu-url">Loading...</strong>
+        </p>
+        <p>
+          Share this link with your guests or print the QR code from the QR Code tab.
+        </p>
+      </section>
+
+      <section class="card" data-section="profile">
+        <h2>Profile</h2>
+        <form id="profile-form">
+          <div class="form-group">
+            <label for="profile-restaurant-name">Restaurant Name</label>
+            <input type="text" id="profile-restaurant-name" required />
+          </div>
+          <div class="form-group">
+            <label for="profile-email">Email</label>
+            <input type="email" id="profile-email" readonly />
+          </div>
+          <div class="form-group">
+            <label for="profile-whatsapp">WhatsApp Number (with country code)</label>
+            <input
+              type="tel"
+              id="profile-whatsapp"
+              placeholder="+91XXXXXXXXXX"
+            />
+          </div>
+          <div class="form-group">
+            <label>Plan</label>
+            <div class="plan-row">
+              <span id="current-plan-label" class="plan-label">Free</span>
+              <button
+                type="button"
+                id="upgrade-plan-btn"
+                class="secondary-btn small-btn"
+              >
+                Upgrade to Premium
+              </button>
+            </div>
+            <p class="small-text">
+              Free plan allows up to 20 items. Premium removes this limit.
+            </p>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="primary-btn" id="profile-save-btn">
+              Save changes
+            </button>
+          </div>
+          <p class="form-message" id="profile-message"></p>
+        </form>
+      </section>
+
+      <section class="card" data-section="menu">
+        <h2 id="menu-form-title">Add Menu Item</h2>
+        <form id="menu-form">
+          <input type="hidden" id="menu-item-id" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="item-name">Name</label>
+              <input type="text" id="item-name" required />
+            </div>
+            <div class="form-group">
+              <label for="item-price">Price</label>
+              <input type="number" step="0.01" id="item-price" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="item-category">Category</label>
+              <input
+                type="text"
+                id="item-category"
+                placeholder="e.g. Starters, Main Course"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="item-image-url">Image URL</label>
+              <input
+                type="url"
+                id="item-image-url"
+                placeholder="https://example.com/image.jpg"
+              />
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="primary-btn" id="save-item-btn">
+              Save Item
+            </button>
+            <button type="button" class="secondary-btn" id="cancel-edit-btn">
+              Cancel
+            </button>
+          </div>
+          <p class="form-message" id="menu-form-message"></p>
+        </form>
+      </section>
+
+      <section class="card" data-section="menu">
+        <h2>My Menu</h2>
+        <p id="menu-usage" class="small-text"></p>
+        <div id="menu-items-list" class="menu-items-list"></div>
+        <p id="menu-empty-message" class="empty-message">
+          No menu items yet. Add your first item above.
+        </p>
+      </section>
+
+      <section class="card" data-section="qr">
+        <h2>Your QR Code</h2>
+        <p class="subtitle">
+          Print this QR code and place it on your tables, stands, or flyers.
+        </p>
+        <div class="qr-layout">
+          <div id="qrcode" class="qrcode-box"></div>
+          <div class="qr-details">
+            <p><strong>Link:</strong></p>
+            <p id="qr-menu-url" class="small-text"></p>
+            <p class="small-text">
+              Guests can scan the QR to open your menu on their phones.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
