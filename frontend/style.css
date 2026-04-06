@@ -6,10 +6,17 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: #f5f5f7;
-  color: #111827;
-  background-image: radial-gradient( circle farthest-corner at 17.6% 50.7%,  rgba(25,0,184,1) 0%, rgba(0,0,0,1) 90% );
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.5;
+  background-color: #020617;
+  color: #e5e7eb;
+  background-image: radial-gradient(
+    circle farthest-corner at 17.6% 50.7%,
+    rgba(25, 0, 184, 1) 0%,
+    rgba(0, 0, 0, 1) 90%
+  );
+  background-attachment: fixed;
 }
 
 /* Layout helpers */
@@ -24,9 +31,13 @@ body {
   position: sticky;
   top: 0;
   z-index: 40;
-  backdrop-filter: blur(12px);
-  background: rgba(249, 250, 251, 0.9);
-  border-bottom: 1px solid #e5e7eb;
+  backdrop-filter: blur(18px);
+  background: linear-gradient(
+    90deg,
+    rgba(15, 23, 42, 0.95),
+    rgba(15, 23, 42, 0.8)
+  );
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
 }
 
 .sm-header-inner {
@@ -63,11 +74,12 @@ body {
 .sm-logo-name {
   font-weight: 700;
   font-size: 1rem;
+  color: #f9fafb;
 }
 
 .sm-logo-tagline {
   font-size: 0.75rem;
-  color: #6b7280;
+  color: #9ca3af;
 }
 
 .sm-nav {
@@ -78,25 +90,25 @@ body {
 
 .sm-nav-link {
   font-size: 0.9rem;
-  color: #4b5563;
+  color: #e5e7eb;
   text-decoration: none;
 }
 
 .sm-nav-link:hover {
-  color: #111827;
+  color: #f9fafb;
 }
 
 .sm-nav-cta {
   font-size: 0.9rem;
   padding: 0.4rem 0.9rem;
   border-radius: 999px;
-  background: #111827;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
   color: #f9fafb;
   text-decoration: none;
 }
 
 .sm-nav-cta:hover {
-  background: #020617;
+  background: linear-gradient(135deg, #4338ca, #4f46e5);
 }
 
 /* Hero */
@@ -114,11 +126,12 @@ body {
 .sm-hero-text h1 {
   font-size: clamp(2.1rem, 3vw, 2.7rem);
   margin: 0 0 0.75rem;
+  color: #f9fafb;
 }
 
 .sm-hero-subtitle {
   margin: 0 0 1.25rem;
-  color: #4b5563;
+  color: #c7d2fe;
   font-size: 0.98rem;
 }
 
@@ -132,7 +145,7 @@ body {
 .sm-hero-note {
   margin: 0;
   font-size: 0.85rem;
-  color: #6b7280;
+  color: #d1d5db;
 }
 
 .sm-btn {
@@ -193,10 +206,16 @@ body {
 }
 
 .sm-hero-card {
-  background: white;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.96),
+    rgba(30, 64, 175, 0.9)
+  );
   border-radius: 1rem;
   padding: 1.4rem 1.3rem;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.16);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(129, 140, 248, 0.45);
+  color: #e5e7eb;
 }
 
 .sm-hero-card-header h2 {
@@ -217,7 +236,7 @@ body {
   margin: 0.5rem 0 1rem;
   padding-left: 1.1rem;
   font-size: 0.9rem;
-  color: #4b5563;
+  color: #e5e7eb;
 }
 
 .sm-hero-mini-steps {
@@ -260,12 +279,13 @@ body {
 }
 
 .sm-feature-card {
-  background: white;
+  background: rgba(15, 23, 42, 0.92);
   border-radius: 0.75rem;
   padding: 1rem;
-  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.35);
   font-size: 0.9rem;
-  color: #4b5563;
+  color: #e5e7eb;
 }
 
 .sm-feature-card h3 {
@@ -280,10 +300,11 @@ body {
 }
 
 .sm-step-card {
-  background: white;
+  background: rgba(15, 23, 42, 0.9);
   border-radius: 0.75rem;
   padding: 1rem;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.35);
   font-size: 0.9rem;
 }
 
@@ -482,6 +503,7 @@ body {
   border-radius: 1rem;
   padding: 1.75rem 1.5rem 1.5rem;
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.15);
+  color: #111827;
 }
 
 .app-title {
@@ -494,7 +516,7 @@ body {
   text-align: center;
   margin: -0.9rem 0 1.4rem;
   font-size: 0.8rem;
-  color: #6b7280;
+  color: #4b5563;
 }
 
 .auth-toggle {
@@ -624,10 +646,11 @@ body {
 }
 
 .card {
-  background: white;
+  background: rgba(15, 23, 42, 0.96);
   border-radius: 0.75rem;
   padding: 1.25rem 1.1rem;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.35);
   margin-bottom: 1rem;
 }
 
@@ -792,6 +815,7 @@ body {
   display: flex;
   gap: 0.5rem;
   background: #f9fafb;
+  color: #111827;
 }
 
 .menu-item-thumb {
@@ -837,6 +861,7 @@ body {
 
 .item-price {
   font-weight: 600;
+  color: #111827;
 }
 
 .public-menu-wrapper {
